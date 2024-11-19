@@ -1,6 +1,8 @@
 package edu.cmu.DirManager;
 
-public interface Manager {
+public class Manager {
+    private DirOps dirOps;
+    
     /**
      * Creates a new directory at the specified path.
      *
@@ -10,5 +12,14 @@ public interface Manager {
      *        -2 if the path is invalid,
      *        -3 if the directory could not be created for some other reason
      */
-    public int newDirectory(String path);
+    public int newDirectory(String path) {
+        if (dirOps.checkDirectoryExists(path)) {
+            return -1;
+        } else if (!dirOps.checkPathValid(path)) {
+            return -2;
+        } else {
+            dirOps.createDirectory(path);
+            return 0;
+        }
+    }
 }
