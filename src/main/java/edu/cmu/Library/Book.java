@@ -1,8 +1,4 @@
 package edu.cmu.Library;
 
-public interface Book {
-    public String getTitle();
-    public String getAuthor();
-    public int getYear();
-    public String getPublisher();
-}
+// The API flaw is not in this file
+public interface Book { }

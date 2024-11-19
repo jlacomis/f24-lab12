@@ -1,10 +1,6 @@
 package edu.cmu.Weather;
 
+// The API flaw is not in this file
 public interface WeatherService {
-    /**
-     * Retrieves the rainfall over the past 24 hours.
-     *
-     * @return the amount of rainfall in millimeters.
-     */
     public double getRainfall();
 }
